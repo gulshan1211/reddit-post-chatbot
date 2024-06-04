@@ -1,0 +1,164 @@
+/* General Settings */
+body {
+    /* Set font family and background color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    /* Center content vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Chat Container */
+.chat-container {
+    /* Set dimensions, border radius, and overflow */
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #252526;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+.chat-header {
+    /* Style header */
+    background-color: #007acc;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+/* Chat Window */
+.chat-window {
+    /* Set styling for chat window */
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+/* Messages */
+.message {
+    /* Style for both bot and user messages */
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 75%;
+}
+
+.bot-message {
+    /* Style for bot messages */
+    background-color: #444;
+    align-self: flex-start;
+    color: #d4d4d4;
+}
+
+.user-message {
+    /* Style for user messages */
+    background-color: #007acc;
+    align-self: flex-end;
+    color: white;
+}
+
+/* Input Area */
+.chat-input {
+    /* Style input area */
+    display: flex;
+    border-top: 1px solid #333;
+}
+
+.chat-input input {
+    /* Style input field */
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    outline: none;
+    font-size: 16px;
+}
+
+.chat-input button {
+    /* Style send button */
+    padding: 15px 20px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    /* Hover style for send button */
+    background-color: #005f99;
+}
+
+/* Style for user message */
+.user-message {
+    /* Style for user messages */
+    background-color: #e9eae8; /* Light green background */
+    color: #333; /* Dark text color */
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* Style for bot message */
+.bot-message {
+    /* Style for bot messages */
+    background-color: #CCE5FF; /* Light blue background */
+    color: #333; /* Dark text color */
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* Style for post container */
+.post-container {
+    /* Style for container of fetched posts */
+    margin-top: 20px;
+}
+
+/* Style for individual post */
+.post {
+    /* Style for each individual post */
+    background-color: #F5F5F5; /* Light gray background */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Style for post title */
+.post h2 {
+    /* Style for post titles */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Style for post author */
+.post p {
+    /* Style for post authors */
+    font-size: 16px;
+    color: #666; /* Gray text color */
+    margin-bottom: 10px;
+}
+
+/* Style for post content */
+.post-content {
+    /* Style for post content */
+    margin-bottom: 10px;
+}
+
+/* Style for Read More link */
+.post a {
+    /* Style for 'Read More' links */
+    color: #007BFF; /* Blue link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make bold */
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Chatbot UI</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Chat container -->
+    <div class="chat-container">
+        <!-- Chat header -->
+        <div class="chat-header">
+            <h1>Chatbot</h1>
+        </div>
+        <!-- Chat window -->
+        <div class="chat-window" id="chatWindow">
+            <!-- Initial bot message -->
+            <div class="message bot-message" id="bot-message">
+                Hello! How can I assist you today?
+            </div>
+        </div>
+        <!-- Input area -->
+        <div class="chat-input">
+            <!-- Input field -->
+            <input type="text" placeholder="Type your message..." id="userInput" onkeypress="handleKeyPress(event)">
+            <!-- Send button -->
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Script tag for JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
