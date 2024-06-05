@@ -1,0 +1,34 @@
+from transformers import BertTokenizer, TFBertForQuestionAnswering
+import tensorflow as tf
+
+# Load pre-trained BERT model and tokenizer
+model_name = 'bert-base-uncased'
+tokenizer = BertTokenizer.from_pretrained(model_name)
+model = TFBertForQuestionAnswering.from_pretrained(model_name)
+
+def chatbot(user_input):
+    # Assume context retrieval and question generation here
+    context = "Some context relevant to the user query."
+    question = "What is the user asking?"
+
+    # Tokenize input
+    inputs = tokenizer.encode_plus(question, context, return_tensors='tf', max_length=512, truncation=True)
+
+    # Forward pass
+    start_logits, end_logits = model(inputs)
+
+    # Get the answer span
+    start_index = tf.argmax(start_logits, axis=1).numpy()[0]
+    end_index = tf.argmax(end_logits, axis=1).numpy()[0]
+
+    # Get the answer tokens
+    tokens = tokenizer.convert_ids_to_tokens(inputs['input_ids'].numpy()[0])
+    answer_tokens = tokens[start_index:end_index + 1]
+    answer = tokenizer.convert_tokens_to_string(answer_tokens)
+
+    return answer
+
+# Example user input
+user_input = "Who is the president of the United States?"
+response = chatbot(user_input)
+print("Chatbot Response:", response)
