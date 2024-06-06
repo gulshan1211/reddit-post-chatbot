@@ -1,0 +1,20 @@
+Sure, here's a revised version of your points with corrected grammar and some clarifications:
+Sure, here’s a revised version of your points with corrected grammar and some clarifications:
+
+	1.	We don’t have access to the Confluence database or Jira database. Do we need to create our own database? Creating our own database will be a challenge, especially since it needs to be in a question-answer format.
+	2.	We have APIs, but we need to predefine all the queries (CQL) so that we can fetch documents from the API. Even fetching will be a challenge because we need a large number of documents, and after that, they will require preprocessing.
+	3.	We don’t have any language model as mentioned (LLM), so how can we impart language knowledge to the model with this data? There is some confusion here; only a search-like functionality seems feasible.
+	4.	Additionally, even if we obtain some data, we only have CPUs, not GPUs, so processing text data on them will also be a challenge.
+	5.	The use of transformers or any model from Hugging Face is not allowed. Even if we find a workaround, it’s difficult to train or fine-tune them on CPUs.
+	6.	Moving on to using NLTK and SpaCy: These libraries can be used to preprocess the data. They are good for tasks like stemming, lemmatization, stop-word removal, or named entity recognition (NER). However, they are usually not used for building a model. SpaCy has very small pretrained models like ‘web-en-core,’ which we were using for preprocessing, but even those models are not available in the SpaCy package we downloaded from the Artifactory. The only thing we can use is cosine similarity on words, but it only checks for matching words in the document, similar to a search query. We are currently stuck in this situation. Could you provide some guidance?
+1. We don’t have access to the Confluence database or Jira database. Do we need to create our own database? Creating our own database will be a challenge, especially since it needs to be in a question-answer format.
+
+2. We have APIs, but we need to predefine all the queries (CQL) so that we can fetch documents from the API. Even fetching will be a challenge because we need a large number of documents, and after that, they will require preprocessing.
+
+3. We don’t have any language model as mentioned (LLM), so how can we impart language knowledge to the model with this data? There is some confusion here; only a search-like functionality seems feasible.
+
+4. Additionally, even if we obtain some data, we only have CPUs, not GPUs, so processing text data on them will also be a challenge.
+
+5. The use of transformers or any model from Hugging Face is not allowed. Even if we find a workaround, it's difficult to train or fine-tune them on CPUs.
+
+6. Moving on to using NLTK and SpaCy: These libraries can be used to preprocess the data. They are good for tasks like stemming, lemmatization, stop-word removal, or named entity recognition (NER). However, they are usually not used for building a model. SpaCy has very small pretrained models like 'web-en-core,' which we were using for preprocessing, but even those models are not available in the SpaCy package we downloaded from the Artifactory. The only thing we can use is cosine similarity on words, but it only checks for matching words in the document, similar to a search query. We are currently stuck in this situation. Could you provide some guidance?
