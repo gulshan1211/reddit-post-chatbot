@@ -1,0 +1,32 @@
+const express = require('express');
+const axios = require('axios');
+const cors = require('cors');
+
+const app = express();
+const port = 3000;
+
+app.use(cors());
+
+app.get('/api/getPostsByUsername', async (req, res) => {
+    const username = req.query.username;
+    const url = `https://reddit34.p.rapidapi.com/getPostsByUsername?username=${username}&sort=new`;
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'f518aaaeedmshc69e27ef00a9b26p17765bjsn05f5b01154f4',
+            'X-RapidAPI-Host': 'reddit34.p.rapidapi.com'
+        }
+    };
+
+    try {
+        const response = await axios.get(url, options);
+        res.json(response.data);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Proxy server is running at http://localhost:${port}`);
+});
